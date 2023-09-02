@@ -1,0 +1,12 @@
+#!/bin/bash
+chmod u+x "$1"
+
+git add .
+
+if [-z $1]; then 
+	git commit -m "push files"
+else
+	git commit -m "$1"
+fi
+
+git push
